@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaGithub, FaLinkedin, FaDiscord ,FaInstagram} from "react-icons/fa";
+import Logo from "../assets/Logo.png";
 
 
 const Footer = () => {
@@ -32,14 +33,14 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white text-2xl font-bold">V</span>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+                <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Venom Index
                 </h3>
-                <p className="text-sm text-gray-400">Next-Gen Technology</p>
+                {/* <p className="text-sm text-gray-400">Next-Gen Technology</p> */}
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
@@ -60,45 +61,6 @@ const Footer = () => {
               ))}
             </div>
           </motion.div>
-
-          {/* Quick Links */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <motion.li key={link} whileHover={{ x: 2 }}>
-                  <a href={`#${link.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group">
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 mr-0 group-hover:mr-2 transition-all duration-200" />
-                    {link}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div> */}
-
-          {/* Resources */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4 className="text-lg font-semibold mb-6 text-white">Resources</h4>
-            <ul className="space-y-3">
-              {resources.map((resource) => (
-                <motion.li key={resource} whileHover={{ x: 2 }}>
-                  <a href={`#${resource.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group">
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 mr-0 group-hover:mr-2 transition-all duration-200" />
-                    {resource}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div> */}
-
           {/* Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
