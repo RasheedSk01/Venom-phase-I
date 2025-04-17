@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.png"; // Adjust the path to your logo image
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,16 +26,24 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4">
-            <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
+            <motion.div
+              className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center overflow-hidden"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="text-white text-2xl font-bold">V</span>
+            </motion.div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Venom Index
               </span>
-              {/* <span className="text-sm text-gray-400">Next Gen Platform</span> */}
+              <span className="text-sm text-gray-400">Next Gen Platform</span>
             </div>
           </Link>
+
+          {/* Navigation Items */}
           <div className="flex items-center space-x-8">
-            {["Home", "About","Contact"].map((item) => (
+            {["Home", "About"].map((item) => (
               <motion.div
                 key={item}
                 className="relative group"
@@ -53,14 +60,14 @@ const Navbar = () => {
               </motion.div>
             ))}
 
-            {/* Login Button
+            {/* Download Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
             >
-              Login
-            </motion.button> */}
+              Download
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
