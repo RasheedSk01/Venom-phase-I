@@ -1,7 +1,7 @@
-# 🚀 Venom Index – Next-Gen Market Intelligence Platform
+# 🚀 Venom Index 
 
 <div align="center">
-  <img src="path_to_your_logo.png" alt="Venom Index Logo" width="180" />
+  <!-- <img src="path_to_your_logo.png" alt="Venom Index Logo" width="180" /> -->
   <p><em>Transforming Market Intelligence with AI-Powered Insights</em></p>
 
   <a href="https://reactjs.org/">
@@ -44,9 +44,7 @@
 - 🔮 Predictive trends  
 - ⚡ Lightning-fast insights—all in a sleek, user-friendly interface.
 
-<div align="center">
-  <img src="path_to_screenshot.png" alt="Venom Index Dashboard" width="700"/>
-</div>
+
 
 ---
 
