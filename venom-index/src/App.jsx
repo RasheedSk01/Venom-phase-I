@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Landingpage from "./pages/Landingpage";
 import "./App.css";
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [videoError, setVideoError] = useState(false);

@@ -41,6 +41,7 @@ const Navbar = () => {
             </div>
           </Link>
 
+
           {/* Navigation Items */}
           <div className="flex items-center space-x-8">
             {["Home", "About"].map((item) => (

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaGithub, FaLinkedin, FaDiscord ,FaInstagram} from "react-icons/fa";
 
+
 const Footer = () => {
   const quickLinks = [
     "Home", "About", "Features", "Blog", "Contact"
