@@ -74,7 +74,7 @@ Make sure you have:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/venom-index.git
+    git clone https://github.com/RasheedSk01/Venom-phase-I
     cd venom-index
     ```
 
@@ -121,7 +121,7 @@ const Dashboard = () => {
 1. Update `package.json`:
     ```json
     {
-      "homepage": "https://yourusername.github.io/venom-index",
+      "homepage": "https://github.com/RasheedSk01/Venom-phase-I",
       "scripts": {
          "predeploy": "npm run build",
          "deploy": "gh-pages -d build"
@@ -171,4 +171,4 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 Your Name – [@yourtwitter](https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08 )  
 Project Link: [https://github.com/RasheedSk01/Venom-phase-I](https://github.com/RasheedSk01/Venom-phase-I)  
 
-Made with ❤️ by Venom team
+Made with ❤️ by Venom-Team
