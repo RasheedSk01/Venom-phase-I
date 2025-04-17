@@ -1,50 +1,33 @@
-# 🚀 Venom Index 
+# 🚀 Venom Index
 
-<div align="center">
-  <!-- <img src="path_to_your_logo.png" alt="Venom Index Logo" width="180" /> -->
-  <p><em>Transforming Market Intelligence with AI-Powered Insights</em></p>
-
-  <a href="https://reactjs.org/">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  </a>
-  <a href="https://tailwindcss.com/">
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  </a>
-  <a href="https://www.framer.com/">
-    <img src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue" />
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" />
-  </a>
-</div>
+Transforming Market Intelligence with AI-Powered Insights
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Deployment](#-deployment)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+1. [Overview](#-overview)
+2. [Features](#-features)
+3. [Tech Stack](#-tech-stack)
+4. [Getting Started](#-getting-started)
+    - [Prerequisites](#-prerequisites)
+    - [Installation](#-installation)
+5. [Usage](#-usage)
+6. [Deployment](#-deployment)
+7. [Contributing](#-contributing)
+8. [License](#-license)
+9. [Contact](#-contact)
 
 ---
 
 ## 🌟 Overview
 
-**Venom Index** is a cutting-edge stock market insights extension designed to revolutionize how investors make data-driven decisions. Powered by advanced AI and machine learning, it delivers:
+Venom Index is a cutting-edge stock market insights extension designed to revolutionize how investors make data-driven decisions. Powered by advanced AI and machine learning, it delivers:
 
 - 📈 Real-time market analytics  
 - 💬 Sentiment analysis  
 - 🔮 Predictive trends  
 - ⚡ Lightning-fast insights—all in a sleek, user-friendly interface.
-
-
 
 ---
 
@@ -70,5 +53,122 @@
 
 ---
 
-## 💻 Tech Stack
+## 🛠 Tech Stack
 
+- **Frontend**: React, Tailwind CSS, Framer Motion  
+- **Backend**: Node.js (optional, for API integration)  
+- **AI/ML**: TensorFlow or similar for predictive analytics  
+- **Deployment**: GitHub Pages or Vercel  
+- **Tools**: Vite, npm, Git  
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+Make sure you have:  
+- `node -v >= 14.0.0`  
+- `npm -v >= 6.0.0`  
+
+### 📥 Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/venom-index.git
+    cd venom-index
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Set up environment variables:
+    ```bash
+    cp .env.example .env
+    # Edit .env with your configuration
+    ```
+
+4. Run the development server:
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 🛠 Usage
+
+Example component usage:
+```jsx
+import { VenomAnalytics } from '@venom/components';
+
+const Dashboard = () => {
+  return (
+     <VenomAnalytics 
+        features={['sentiment', 'trends']}
+        refreshRate={5000}
+     />
+  );
+};
+```
+
+---
+
+## 📦 Deployment
+
+### GitHub Pages
+
+1. Update `package.json`:
+    ```json
+    {
+      "homepage": "https://yourusername.github.io/venom-index",
+      "scripts": {
+         "predeploy": "npm run build",
+         "deploy": "gh-pages -d build"
+      }
+    }
+    ```
+
+2. Deploy:
+    ```bash
+    npm run deploy
+    ```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+
+1. Fork the repository  
+2. Create a new branch:
+    ```bash
+    git checkout -b feature/amazing-feature
+    ```
+
+3. Make your changes and commit:
+    ```bash
+    git commit -m "Add amazing feature"
+    ```
+
+4. Push to your branch:
+    ```bash
+    git push origin feature/amazing-feature
+    ```
+
+5. Submit a Pull Request  
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📫 Contact
+
+Your Name – [@yourtwitter](https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08 )  
+Project Link: [https://github.com/RasheedSk01/Venom-phase-I](https://github.com/RasheedSk01/Venom-phase-I)  
+
+Made with ❤️ by Venom team
