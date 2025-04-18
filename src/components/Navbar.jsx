@@ -36,7 +36,6 @@ const Navbar = () => {
             </div>
           </Link>
 
-
           {/* Navigation Items */}
           <div className="flex items-center space-x-8">
             {["Home", "About"].map((item) => (
@@ -47,7 +46,7 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link
-                  to={`/${item.toLowerCase()}`}
+                  to={"/"}
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   {item}
@@ -83,7 +82,9 @@ const Navbar = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  d={
+                    isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+                  }
                 />
               </svg>
             </motion.button>
@@ -100,11 +101,7 @@ const Navbar = () => {
           >
             <div className="px-4 py-6 space-y-4">
               {["Home", "About", "Contact"].map((item) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ x: 10 }}
-                  className="block"
-                >
+                <motion.div key={item} whileHover={{ x: 10 }} className="block">
                   <Link
                     to={`/${item.toLowerCase()}`}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-lg hover:bg-white/5 transition-colors duration-200"
@@ -114,10 +111,7 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                whileHover={{ x: 10 }}
-                className="block px-3 py-2"
-              >
+              <motion.div whileHover={{ x: 10 }} className="block px-3 py-2">
                 <button className="w-full py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                   Login
                 </button>
