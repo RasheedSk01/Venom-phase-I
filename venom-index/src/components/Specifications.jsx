@@ -57,7 +57,7 @@ const Specifications = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
-            Why Choose Venom Index?
+            Why Choose Venom's Index?
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Experience the next generation of market analysis with our comprehensive suite of tools
@@ -90,7 +90,7 @@ const Specifications = () => {
         </div>
 
         {/* Additional Info Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -102,7 +102,7 @@ const Specifications = () => {
           <p className="mt-4 text-sm text-gray-400">
             Join thousands of users already benefiting from Venom Index
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

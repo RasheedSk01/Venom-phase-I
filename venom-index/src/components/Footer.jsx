@@ -1,96 +1,71 @@
+// C:/Users/oyjaa/Venom-phase-I/venom-index/src/components/Footer.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import { FaTwitter, FaGithub, FaLinkedin, FaDiscord ,FaInstagram} from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
 
-
 const Footer = () => {
-  const quickLinks = [
-    "Home", "About", "Features", "Blog", "Contact"
-  ];
-
-  const resources = [
-    "Documentation", "Support", "API Reference", "Downloads", "Updates"
-  ];
-
   const socialLinks = [
-    { icon: FaTwitter, url: " https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08 ", label: "Twitter" },
-    // { icon: FaGithub, url: "#github", label: "GitHub" },
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/venom-s-index-90a818360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ", label: "LinkedIn" },
+    { icon: FaTwitter, url: "https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08", label: "Twitter" },
+    { icon: FaLinkedin, url: "https://www.linkedin.com/in/venom-s-index-90a818360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
     { icon: FaInstagram, url: "https://www.instagram.com/venoms_index/?utm_source=qr&igsh=dGVxamdxczBuN3Fz#", label: "Instagram" },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-gray-300">
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col items-center text-center space-y-8"
+        >
           {/* Brand Section */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6"
-          >
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
-                <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
+          <motion.div variants={itemVariants} className="space-y-6 max-w-md">
+            <div className="flex items-center justify-center space-x-4">
+              <div className="w-14 h-14 rounded-full  p-1 shadow-md">
+                <img src={Logo} alt="Logo" className="w-full h-full rounded-full object-cover" />
               </div>
               <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Venom Index
+                <h3 className="text-2xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Venom's Index
                 </h3>
-                {/* <p className="text-sm text-gray-400">Next-Gen Technology</p> */}
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Empowering the future with innovative solutions and cutting-edge developments in blockchain technology.
+              Empowering the future with innovative solutions and cutting-edge development using AI
             </p>
-            <div className="flex space-x-5">
+            <div className="flex justify-center space-x-6">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.url}
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.2, color: "#ffffff" }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 transition-colors duration-300"
                 >
-                  <social.icon className="text-xl" />
+                  <social.icon className="text-2xl" />
                   <span className="sr-only">{social.label}</span>
                 </motion.a>
               ))}
             </div>
           </motion.div>
-          {/* Newsletter */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-6"
-          >
-            <h4 className="text-lg font-semibold text-white">Stay Updated</h4>
-            <p className="text-sm text-gray-400">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="space-y-4">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-white/5 rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder-gray-500"
-                />
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
-                >
-                  Subscribe
-                </motion.button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Bar */}
@@ -101,14 +76,15 @@ const Footer = () => {
               © {new Date().getFullYear()} Venom Index. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
-                <a
+              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
+                <motion.a
                   key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  whileHover={{ color: "#ffffff" }}
+                  className="text-sm text-gray-400 transition-colors duration-200"
                 >
                   {item}
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -116,7 +92,7 @@ const Footer = () => {
       </div>
 
       {/* Gradient Border */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-30" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-transparent opacity-50" />
     </footer>
   );
 };

@@ -27,9 +27,9 @@ const Hero = () => {
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/25">
                 Download Now
               </button>
-              <button className="px-8 py-4 bg-white/10 rounded-lg text-white font-semibold hover:bg-white/20 transition-all duration-300">
+              {/* <button className="px-8 py-4 bg-white/10 rounded-lg text-white font-semibold hover:bg-white/20 transition-all duration-300">
                 Learn More
-              </button>
+              </button> */}
             </div>
 
             {/* Key Features */}
