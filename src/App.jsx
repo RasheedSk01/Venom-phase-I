@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Landingpage from "./pages/Landingpage";
 import "./App.css";
-
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -92,6 +92,7 @@ function App() {
             <motion.div {...contentFade}>
               <Routes>
                 <Route path="/" element={<Landingpage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               </Routes>
             </motion.div>
           )}

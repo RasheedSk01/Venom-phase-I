@@ -3,12 +3,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaTwitter, url: "https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08", label: "Twitter" },
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/venom-s-index-90a818360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
-    { icon: FaInstagram, url: "https://www.instagram.com/venoms_index/?utm_source=qr&igsh=dGVxamdxczBuN3Fz#", label: "Instagram" },
+    {
+      icon: FaTwitter,
+      url: "https://x.com/venomsindex01?t=Easpl5fD_XHHK4rpmXPxCA&s=08",
+      label: "Twitter",
+    },
+    {
+      icon: FaLinkedin,
+      url: "https://www.linkedin.com/in/venom-s-index-90a818360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaInstagram,
+      url: "https://www.instagram.com/venoms_index/?utm_source=qr&igsh=dGVxamdxczBuN3Fz#",
+      label: "Instagram",
+    },
   ];
 
   const containerVariants = {
@@ -36,7 +49,11 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="space-y-6 max-w-md">
             <div className="flex items-center justify-center space-x-4">
               <div className="w-14 h-14 rounded-full  p-1 shadow-md">
-                <img src={Logo} alt="Logo" className="w-full h-full rounded-full object-cover" />
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-2xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -45,7 +62,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Empowering the future with innovative solutions and cutting-edge development using AI
+              Empowering the future with innovative solutions and cutting-edge
+              development using AI
             </p>
             <div className="flex justify-center space-x-6">
               {socialLinks.map((social) => (
@@ -76,15 +94,18 @@ const Footer = () => {
               © {new Date().getFullYear()} Venom Index. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+              {[
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms of Service", path: "/terms" },
+                { name: "Cookie Policy", path: "/cookies" },
+              ].map(({ name, path }) => (
+                <motion.div
+                  key={name}
                   whileHover={{ color: "#ffffff" }}
                   className="text-sm text-gray-400 transition-colors duration-200"
                 >
-                  {item}
-                </motion.a>
+                  <Link to={path}>{name}</Link>
+                </motion.div>
               ))}
             </div>
           </div>
