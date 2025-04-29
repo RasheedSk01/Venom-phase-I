@@ -5,6 +5,8 @@ import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
+
+
 const Footer = () => {
   const socialLinks = [
     {
@@ -95,7 +97,7 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {[
-                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "PrivacyPolicy", path: "/privacyPolicy" },
                 { name: "Terms of Service", path: "/terms" },
                 { name: "Cookie Policy", path: "/cookies" },
               ].map(({ name, path }) => (
