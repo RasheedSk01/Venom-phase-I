@@ -92,7 +92,7 @@ function App() {
             <motion.div {...contentFade}>
               <Routes>
                 <Route path="/" element={<Landingpage />} />
-                <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               </Routes>
             </motion.div>
           )}
