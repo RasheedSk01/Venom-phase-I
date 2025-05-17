@@ -56,13 +56,13 @@ const Navbar = () => {
             ))}
 
             {/* Download Button */}
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
             >
               Download
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}

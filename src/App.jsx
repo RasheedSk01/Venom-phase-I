@@ -13,7 +13,9 @@ function App() {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
-
+    if(/privacy-policy/i.test(window.location.pathname)) {
+      setIsLoading(false);
+    }
     return () => clearTimeout(timer);
   }, []);
 
