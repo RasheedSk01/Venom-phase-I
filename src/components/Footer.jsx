@@ -99,7 +99,7 @@ const Footer = () => {
               {[
                  { name: "Privacy Policy", path: "/privacy-policy", type: "internal" },
                  { name: "Terms of Service", path: "/terms.html", type: "external" },
-                 { name: "Cookie Policy", path: "/cookies", type: "internal" },   
+                 { name: "Cookie Policy", path: "/cookie-policy.html", type: "external" },   
                  ].map(({ name, path, type }) => (
   <motion.div
     key={name}
