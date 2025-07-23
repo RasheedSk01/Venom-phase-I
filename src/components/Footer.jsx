@@ -97,17 +97,23 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {[
-                 { name: "Privacy Policy", path: "/privacy-policy" },
-                 { name: "Terms of Service", path: "/terms" },
-                 { name: "Cookie Policy", path: "/cookies" },
-                ].map(({ name, path }) => (
-                 <motion.div
-                   key={name}
-                   whileHover={{ color: "#ffffff" }}
-                   className="text-sm text-gray-400 transition-colors duration-200"
-                  >
-                   <Link to={path}>{name}</Link>
-                     </motion.div>
+                 { name: "Privacy Policy", path: "/privacy-policy", type: "internal" },
+                 { name: "Terms of Service", path: "/terms.html", type: "external" },
+                 { name: "Cookie Policy", path: "/cookies", type: "internal" },   
+                 ].map(({ name, path, type }) => (
+  <motion.div
+    key={name}
+    whileHover={{ color: "#ffffff" }}
+    className="text-sm text-gray-400 transition-colors duration-200"
+  >
+    {type === "external" ? (
+      <a href={path} target="_blank" rel="noopener noreferrer">
+        {name}
+      </a>
+    ) : (
+      <Link to={path}>{name}</Link>
+    )}
+  </motion.div>
                      ))}
 
             </div>
