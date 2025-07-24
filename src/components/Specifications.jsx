@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 const Specifications = () => {
   const features = [
     {
@@ -30,7 +29,7 @@ const Specifications = () => {
     },
     {
       title: "Credibility Score",
-      description: "Reliability check for each piece of information",
+      description: "Reliability check for each piece of information which you get",
       icon: (
         <path
           strokeLinecap="round"
@@ -43,20 +42,62 @@ const Specifications = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-gray-900 to-black">
-      {/* Background Accents */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl" />
+    <section className="relative py-20 bg-black overflow-hidden">
+      {/* Animated Particle Background */}
+      <div className="absolute inset-0 bg-particle-animation opacity-20 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      {/* Stock Chart Pattern Overlay */}
+      <div className="absolute inset-0 bg-stock-chart-pattern bg-repeat opacity-10 pointer-events-none"></div>
+
+      {/* Decorative Glowing Orbs */}
+      <motion.div
+        className="absolute top-10 left-10 w-48 h-48 bg-green-500/20 rounded-full blur-2xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.7, 0.5],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-10 w-48 h-48 bg-lime-400/20 rounded-full blur-2xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.7, 0.5],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          delay: 1,
+        }}
+      />
+
+      {/* Abstract Lines */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-10 w-1 h-32 bg-gradient-to-b from-green-400 to-lime-400 opacity-20"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-10 w-1 h-32 bg-gradient-to-b from-lime-400 to-yellow-300 opacity-20"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 3.5, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 via-green-500 to-lime-400 bg-clip-text text-transparent mb-4">
             Why Choose Venom's Index?
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -73,36 +114,26 @@ const Specifications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-lime-500/50 transition-all duration-300">
+                <div className="bg-gradient-to-r from-green-600 via-green-500 to-lime-400 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {feature.icon}
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <p className="text-gray-400 text-sm">{feature.description}</p>
                 
-                {/* Hover Effects */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 rounded-2xl transition-all duration-300" />
+                {/* Enhanced Hover Effects */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-lime-400/10 opacity-0 group-hover:opacity-100 rounded-2xl transition-all duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 100 }}
+                />
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Additional Info Section */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 text-center"
-        >
-          <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/25">
-            Get Started Now
-          </button>
-          <p className="mt-4 text-sm text-gray-400">
-            Join thousands of users already benefiting from Venom Index
-          </p>
-        </motion.div> */}
       </div>
     </section>
   );
