@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Landingpage from "./pages/Landingpage";
 import "./App.css";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Terms from "./components/TermsandConditions";
+import CookiePolicy from "./components/CookiePolicy";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -95,6 +97,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Landingpage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/CookiePolicy" element={<CookiePolicy />} />
               </Routes>
             </motion.div>
           )}
