@@ -4,12 +4,11 @@ import "./style.css";
 const Hero = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
-      {/* Background Accent */}
+
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
@@ -21,17 +20,12 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/25">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:cursor-pointer">
                 Download Now
               </button>
-              {/* <button className="px-8 py-4 bg-white/10 rounded-lg text-white font-semibold hover:bg-white/20 transition-all duration-300">
-                Learn More
-              </button> */}
             </div>
 
-            {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-8">
               {[
                 "Real-time News Updates",

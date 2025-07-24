@@ -1,8 +1,7 @@
-// C:/Users/oyjaa/Venom-phase-I/venom-index/src/components/Footer.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Logo from "../assets/Logo.png";
+import Logo from "/venom'slogo.png";
 import { Link } from "react-router-dom";
 
 
@@ -50,13 +49,13 @@ const Footer = () => {
           {/* Brand Section */}
           <motion.div variants={itemVariants} className="space-y-6 max-w-md">
             <div className="flex items-center justify-center space-x-4">
-              <div className="w-14 h-14 rounded-full  p-1 shadow-md">
+              {/* <div className="w-18 h-18 rounded-full  p-1 shadow-md"> */}
                 <img
                   src={Logo}
                   alt="Logo"
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-12 h-12 rounded-full"
                 />
-              </div>
+              {/* </div> */}
               <div>
                 <h3 className="text-2xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Venom's Index

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logobg.png";
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,18 +26,16 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4">
-            <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Venom's Index
-              </span>
-              {/* <span className="text-sm text-gray-400">Next Gen Platform</span> */}
-            </div>
-          </Link>
+                <Link to="/" className="flex items-center space-x-4">
+                <img src={Logo} alt="Logo" className="w-15 h-13 " />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white mt-[2px]">
+                  Venom's Index
+                  </span>
+                </div>
+                </Link>
 
-          {/* Navigation Items */}
+                {/* Navigation Items */}
           <div className="flex items-center space-x-8">
             {["Home", "About"].map((item) => (
               <motion.div
