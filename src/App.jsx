@@ -66,7 +66,7 @@ function App() {
               ) : (
                 <div className="text-center">
                   <motion.div
-                    className="w-24 h-24 border-4 border-purple-500 border-t-transparent rounded-full"
+                    className="w-24 h-24 border-4 bordergradient-to-b from-green-400 to-lime-400  border-t-transparent rounded-full"
                     {...spinnerAnimation}
                   />
                   <motion.h2
@@ -82,7 +82,7 @@ function App() {
 
               {/* Progress Bar */}
               <motion.div
-                className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 to-blue-600"
+                className="absolute bottom-0 left-0 h-1 bg-gradient-to-b from-green-400 to-lime-400"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 2, ease: "linear" }}

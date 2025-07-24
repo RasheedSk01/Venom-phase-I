@@ -1,18 +1,62 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./style.css";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
-      {/* Background Accent */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <div className="relative min-h-screen bg-black py-20 overflow-hidden">
+      {/* Animated Particle Background */}
+      <div className="absolute inset-0 bg-particle-animation opacity-20 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      {/* Stock Chart Pattern Overlay */}
+      <div className="absolute inset-0 bg-stock-chart-pattern bg-repeat opacity-10 pointer-events-none"></div>
+
+      {/* Decorative Glowing Orbs */}
+      <motion.div
+        className="absolute top-10 left-10 w-48 h-48 bg-green-500/20 rounded-full blur-2xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.7, 0.5],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-10 w-48 h-48 bg-lime-400/20 rounded-full blur-2xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.7, 0.5],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "reverse",
+          delay: 1,
+        }}
+      />
+
+      {/* Abstract Lines */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-10 w-1 h-32 bg-gradient-to-b from-green-400 to-lime-400 opacity-20"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-10 w-1 h-32 bg-gradient-to-b from-lime-400 to-yellow-300 opacity-20"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 3.5, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-400 via-green-500 to-lime-400 bg-clip-text text-transparent">
                 Instant Insights, Zero Hassle
               </h1>
               <p className="text-gray-300 text-lg md:text-xl">
@@ -21,17 +65,16 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/25">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-lime-400 rounded-lg text-white font-semibold hover:from-green-700 hover:to-lime-500 transition-all duration-300 shadow-lg shadow-green-500/25 hover:cursor-pointer"
+              >
                 Download Now
-              </button>
-              {/* <button className="px-8 py-4 bg-white/10 rounded-lg text-white font-semibold hover:bg-white/20 transition-all duration-300">
-                Learn More
-              </button> */}
+              </motion.button>
             </div>
 
-            {/* Key Features */}
             <div className="grid grid-cols-2 gap-4 pt-8">
               {[
                 "Real-time News Updates",
@@ -41,7 +84,7 @@ const Hero = () => {
               ].map((feature) => (
                 <div key={feature} className="flex items-center space-x-2">
                   <svg
-                    className="w-5 h-5 text-purple-500"
+                    className="w-5 h-5 text-lime-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -60,7 +103,7 @@ const Hero = () => {
           {/* Right Content - Info Box */}
           <div className="relative">
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-green-400 via-green-500 to-lime-400 bg-clip-text text-transparent mb-6">
                 About VENOM'S Index
               </h3>
               <div className="space-y-4 text-gray-300">
@@ -74,9 +117,9 @@ const Hero = () => {
 
                 <div className="space-y-4 pt-4">
                   <div className="flex items-start gap-3">
-                    <div className="bg-purple-500/10 p-2 rounded-lg mt-1">
+                    <div className="bg-green-500/10 p-2 rounded-lg mt-1">
                       <svg
-                        className="w-5 h-5 text-purple-400"
+                        className="w-5 h-5 text-green-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -96,9 +139,9 @@ const Hero = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="bg-blue-500/10 p-2 rounded-lg mt-1">
+                    <div className="bg-lime-500/10 p-2 rounded-lg mt-1">
                       <svg
-                        className="w-5 h-5 text-blue-400"
+                        className="w-5 h-5 text-lime-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -119,9 +162,9 @@ const Hero = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="bg-purple-500/10 p-2 rounded-lg mt-1">
+                    <div className="bg-green-500/10 p-2 rounded-lg mt-1">
                       <svg
-                        className="w-5 h-5 text-purple-400"
+                        className="w-5 h-5 text-green-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -143,9 +186,8 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -z-10 top-0 right-0 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl"></div>
-            <div className="absolute -z-10 bottom-0 left-0 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl"></div>
+            {/* Existing Decorative Elements */}
+            <div className="absolute -z-10 top-0 right-0 w-72 h-72 bg-green-500/30 rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>

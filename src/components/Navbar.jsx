@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logobg.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,20 +19,18 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/90 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent"
+          ? "bg-transparent backdrop-blur-md border-b-0"
+          :  "bg-transparent backdrop-blur-md border-b-0"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-4">
-            <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
+            <img src={Logo} alt="Logo" className="w-15 h-13" />
             <div className="flex flex-col">
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Venom's Index
-              </span>
-              {/* <span className="text-sm text-gray-400">Next Gen Platform</span> */}
+              <span className="text-xl font-bold bg-gradient-to-r from-green-400 via-lime-400 to-yellow-300 bg-clip-text text-transparent">
+  Venom's Index
+</span>
             </div>
           </Link>
 
@@ -46,23 +44,14 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link
-                  to={"/"}
-                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                  to="/"
+                  className="text-gray-200 hover:text-white transition-colors duration-300"
                 >
                   {item}
                 </Link>
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-green-400 via-lime-400 to-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </motion.div>
             ))}
-
-            {/* Download Button */}
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
-            >
-              Download
-            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,7 +59,7 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-300 hover:text-white"
+              className="p-2 text-gray-200 hover:text-white"
             >
               <svg
                 className="w-6 h-6"
@@ -97,14 +86,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-lg border-t border-white/10"
+            className="lg:hidden bg-gradient-to-r from-green-400/95 via-lime-400/95 to-yellow-300/95 backdrop-blur-lg border-t border-white/10"
           >
             <div className="px-4 py-6 space-y-4">
               {["Home", "About", "Contact"].map((item) => (
                 <motion.div key={item} whileHover={{ x: 10 }} className="block">
                   <Link
                     to={`/${item.toLowerCase()}`}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-lg hover:bg-white/5 transition-colors duration-200"
+                    className="text-gray-200 hover:text-white block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     {item}
@@ -112,7 +101,7 @@ const Navbar = () => {
                 </motion.div>
               ))}
               <motion.div whileHover={{ x: 10 }} className="block px-3 py-2">
-                <button className="w-full py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                <button className="w-full py-2 bg-gradient-to-r from-green-400 via-lime-400 to-yellow-300 rounded-lg text-white font-semibold hover:from-green-500 hover:via-lime-500 hover:to-yellow-400 transition-all duration-300">
                   Login
                 </button>
               </motion.div>
