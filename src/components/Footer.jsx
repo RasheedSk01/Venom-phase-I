@@ -98,8 +98,8 @@ const Footer = () => {
             <div className="flex space-x-6">
               {[
                  { name: "Privacy Policy", path: "/privacy-policy", type: "internal" },
-                 { name: "Terms of Service", path: "/terms.html", type: "external" },
-                 { name: "Cookie Policy", path: "/cookie-policy.html", type: "external" },   
+                 { name: "Terms of Service", path: "/Terms", type: "internal" },
+                 { name: "Cookie Policy", path: "/CookiePolicy", type: "internal" },   
                  ].map(({ name, path, type }) => (
   <motion.div
     key={name}
