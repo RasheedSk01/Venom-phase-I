@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Logo from "../assets/Logobg.png";
+import Logo from "../assets/logobg.png";
 import { Link } from "react-router-dom";
 
 
