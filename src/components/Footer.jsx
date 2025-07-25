@@ -5,7 +5,6 @@ import Logo from "../assets/logobg.png";
 import { Link } from "react-router-dom";
 
 
-
 const Footer = () => {
   const socialLinks = [
     {
