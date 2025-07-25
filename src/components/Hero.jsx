@@ -57,11 +57,11 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-400 via-green-500 to-lime-400 bg-clip-text text-transparent">
-                Instant Insights, Zero Hassle
+                Real-Time Insights, Smarter Decisions.
               </h1>
               <p className="text-gray-300 text-lg md:text-xl">
-                Add Venom's Index to your browser for real-time market sentiment
-                analysis and curated news updates.
+                Get Instant market sentiment analysis,
+                credibility scoring and curated news updates - right from your browser.
               </p>
             </div>
 
@@ -71,15 +71,15 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-lime-400 rounded-lg text-white font-semibold hover:from-green-700 hover:to-lime-500 transition-all duration-300 shadow-lg shadow-green-500/25 hover:cursor-pointer"
               >
-                Download Now
+                Install Extension
               </motion.button>
             </div>
 
             <div className="grid grid-cols-2 gap-4 pt-8">
               {[
                 "Real-time News Updates",
-                "Sentiment Analysis",
-                "Market Mood Monitor",
+                "Curated business and stock news",
+                "AI - Powered sentiment analysis",
                 "Credibility Scoring",
               ].map((feature) => (
                 <div key={feature} className="flex items-center space-x-2">
@@ -108,11 +108,10 @@ const Hero = () => {
               </h3>
               <div className="space-y-4 text-gray-300">
                 <p className="leading-relaxed">
-                  VENOM'S Index is a cutting-edge stock market insights
-                  extension designed to help investors make data-driven
-                  decisions. It aggregates real-time market trends, sentiment
-                  analysis, and predictive analytics into a single, easy-to-use
-                  dashboard.
+                  Venom's Index is an intelligent stock market browser
+                  extension that empowers investors with real-time data,
+                  AI - Powered sentiment analysis, and predictive insights
+                  all in a clean, intutive dashboard.
                 </p>
 
                 <div className="space-y-4 pt-4">
