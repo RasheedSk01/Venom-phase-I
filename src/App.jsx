@@ -63,7 +63,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
           <AnimatePresence>
-            {isLoading && (
+            {/* {isLoading && (
               <motion.div
                 className="fixed inset-0 z-50 bg-black flex items-center justify-center"
                 {...loadingFade}
@@ -84,7 +84,7 @@ function App() {
                         }
                         type="video/mp4"
                       />
-                    </video>
+                    </video>  
                   </motion.div>
                 ) : (
                   <div className="text-center">
@@ -104,18 +104,18 @@ function App() {
                 )}
 
                 {/* Progress Bar */}
-                <motion.div
+                {/* <motion.div
                   className="absolute bottom-0 left-0 h-1 bg-gradient-to-b from-green-400 to-lime-400"
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 2, ease: "linear" }}
                 />
               </motion.div>
-            )}
+            )}  */}
           </AnimatePresence>
 
           <AnimatePresence>
-            {!isLoading && (
+            {/* {!isLoading && ( */}
               <motion.div {...contentFade}>
                 <Routes>
                   <Route path="/" element={<Landingpage />} />
@@ -124,7 +124,7 @@ function App() {
                   <Route path="/CookiePolicy" element={<CookiePolicy />} />
                 </Routes>
               </motion.div>
-            )}
+            {/* )} */}
           </AnimatePresence>
         </div>
       </Router>
