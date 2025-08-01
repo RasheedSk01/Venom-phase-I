@@ -66,7 +66,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://your-extension-link.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://chromewebstore.google.com/detail/Stock%20News%20Copilot%201%20%F0%9F%A7%91%E2%80%8D%E2%9C%88%EF%B8%8F/iaecdpankkjeopakmmchkgapkpaehhna?hl=en&authuser=0 " target="_blank" rel="noopener noreferrer">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
