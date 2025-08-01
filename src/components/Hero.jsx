@@ -65,7 +65,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <a href="https://chromewebstore.google.com/detail/Stock%20News%20Copilot%201%20%F0%9F%A7%91%E2%80%8D%E2%9C%88%EF%B8%8F/iaecdpankkjeopakmmchkgapkpaehhna?hl=en&authuser=0 " className="flex flex-col sm:flex-row gap-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -73,7 +73,7 @@ const Hero = () => {
               >
                 Download Now
               </motion.button>
-            </div>
+            </a>
 
             <div className="grid grid-cols-2 gap-4 pt-8">
               {[
