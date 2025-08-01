@@ -66,15 +66,16 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-lime-400 rounded-lg text-white font-semibold hover:from-green-700 hover:to-lime-500 transition-all duration-300 shadow-lg shadow-green-500/25 hover:cursor-pointer"
-              >
-                Install Extension
-              </motion.button>
-            </div>
-
+              <a href="https://your-extension-link.com" target="_blank" rel="noopener noreferrer">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-gradient-to-r from-green-600 via-green-500 to-lime-400 rounded-lg text-white font-semibold hover:from-green-700 hover:to-lime-500 transition-all duration-300 shadow-lg shadow-green-500/25 hover:cursor-pointer text-center"
+                  >
+                    Install Extension
+                  </motion.div>
+                </a>
+              </div>
             <div className="grid grid-cols-2 gap-4 pt-8">
               {[
                 "Real-time News Updates",
